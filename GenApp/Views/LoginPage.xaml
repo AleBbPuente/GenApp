@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GenApp.Views.LoginPage" BackgroundColor="#FFFFFF">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" >
+            <Image AnchorX="0.5" AnchorY="0.5" Source="logo.png" x:Name="ImageLogo" Margin="0,0,0,5" WidthRequest="200" MinimumHeightRequest="0" MinimumWidthRequest="0" />
+            <Label Text="Usuario" AnchorX="0.5" Margin="40,0" />
+            <Entry x:Name="usuario" Placeholder="" WidthRequest="-1" Visual="Material" ReturnType="Next" VerticalOptions="Center" Keyboard="Email" Margin="40,0" />
+
+            <Label Text="Contraseña" Margin="40,0" />
+            <Entry x:Name="password"  Placeholder="" Keyboard="Text" IsPassword="True" Margin="40,0"  />
+
+            <Button  Text="Iniciar Sesión"   Margin="40,40,40,0" Clicked="Login" >
+            </Button>
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>  
