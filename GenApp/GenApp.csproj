@@ -21,6 +21,7 @@
     <Folder Include="ThemesResources\" />
     <Folder Include="Helpers\" />
     <Folder Include="Clases\" />
+    <Folder Include="Modelos\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="ThemesResources\DefaultTheme.xml" />
@@ -33,8 +34,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="ThemesResources\MyPage.xaml" />
+    <EmbeddedResource Remove="Views\MyPage.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\Menu.cs" />
+    <Compile Remove="Views\ILoginManager.cs" />
+    <Compile Remove="Views\Inicio.cs" />
+    <Compile Remove="Views\MyPage.xaml.cs" />
   </ItemGroup>
 </Project>

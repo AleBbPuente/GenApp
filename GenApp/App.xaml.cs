@@ -12,29 +12,28 @@ namespace GenApp
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
-        }
+            Current = this;
+            var isLoggedIn = Properties.ContainsKey("IsLoggedIn") ? (bool)Properties["IsLoggedIn"] : false;
+            if (isLoggedIn)
 
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+                MainPage = new Inicio();
+            else
+                MainPage = new LoginModalPage(this); 
         }
 
         public void ShowMainPage()
         {
-            throw new NotImplementedException();
+            MainPage = new Inicio();
         }
 
         public void Logout()
         {
-            throw new NotImplementedException();
+            Properties["IsLoggedIn"] = false;
+            MainPage = new LoginModalPage(this);
         }
+
+        static ILoginManger loginManager;
+        public static App Curre;
+        public static int val;
     }
 }

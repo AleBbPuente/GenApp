@@ -7,11 +7,27 @@ namespace GenApp.Views
 {
     public partial class LoginPage : ContentPage
     {
-        ILoginManger lmi = null;
+        public static string NombreUsuario = "admin";
+        ILoginManger iml = null;
+       
         public LoginPage(ILoginManger ilm)
         {
             InitializeComponent();
-            this.lmi = ilm;
+            iml = ilm;
+        }
+
+        public LoginPage()
+        {
+        }
+
+        void btnLoginClick (object sender, EventArgs e)
+
+        {
+            NombreUsuario = "admin";
+            App.Current.Properties["usuario"] = NombreUsuario;
+            App.Current.Properties["IsLoggedIn"] = true;
+
+            iml.ShowMainPage();
         }
 
         public async void Login(object sender, EventArgs e)
