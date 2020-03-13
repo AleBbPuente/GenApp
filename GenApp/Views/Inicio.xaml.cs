@@ -11,5 +11,7 @@ namespace GenApp.Views
         {
             InitializeComponent();
         }
+
+
     }
 }

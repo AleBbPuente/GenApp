@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Ojalá funcione esto."/>
-            <Button Text="Cerrar sesión" Clicked="btnLogoutClick"/>
+            <!--<Button Text="Cerrar sesión" Clicked="btnLogoutClick"/>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

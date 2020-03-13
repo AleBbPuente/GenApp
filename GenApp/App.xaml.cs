@@ -33,7 +33,7 @@ namespace GenApp
         }
 
         static ILoginManger loginManager;
-        public static App Curre;
+        public static App Current;
         public static int val;
     }
 }
